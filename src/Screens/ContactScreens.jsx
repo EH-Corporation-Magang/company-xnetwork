@@ -1,9 +1,54 @@
 import React, {
     useState
 } from 'react';
-
+import MySwal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 const ContactScreens = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const Swal = withReactContent(MySwal)
+    const URL_API = `http://localhost:8000`
+
+    const handleSubmit = async e => {
+        e.preventDefault()
+        try {
+            const data = await fetch(`${URL_API}/contact/store`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            const resp = await data.json()
+            console.log(resp)
+            if (resp.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success send a message',
+                    text: 'Well get back to you in 1-2 business days'
+                }).then(function () {
+                    setEmail('')
+                    setMessage('')
+                    setName('')
+                    Swal.fire({
+                        title: 'Loading...',
+                        timer: 1000,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        },
+                    })
+                })
+            }
+        } catch (error) {
+            console.log(error)
+            alert(error)
+        }
+    }
+
     return (
         <>
             <section className="page-header">
@@ -20,7 +65,7 @@ const ContactScreens = () => {
                 </div>
             </section>
             <section className="contact-form-wrapper">
-                <form >
+                <form onSubmit={e => handleSubmit(e)}>
                     <div className="row">
                         <div className="form-group col-md-6">
                             <label htmlFor="name">YOUR NAME <sup>*</sup></label>
@@ -30,6 +75,8 @@ const ContactScreens = () => {
                                 id="name"
                                 name="name"
                                 placeholder="Name *"
+                                onChange={e => setName(e.target.value)}
+                                value={name}
                                 required
                             />
                         </div>
@@ -41,6 +88,8 @@ const ContactScreens = () => {
                                 id="email"
                                 name="email"
                                 placeholder="johndoe@gmail.com"
+                                onChange={e => setEmail(e.target.value)}
+                                value={email}
                                 required
                             />
                         </div>
@@ -54,6 +103,8 @@ const ContactScreens = () => {
                                 className="form-control"
                                 rows={7}
                                 placeholder="Hi there, I would like to ..."
+                                onChange={e => setMessage(e.target.value)}
+                                value={message}
                                 required
                             />
                         </div>
