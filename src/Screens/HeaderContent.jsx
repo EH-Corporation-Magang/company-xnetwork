@@ -28,46 +28,88 @@ const HeaderContent = () => {
 
     return (
         <>
-            <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active" data-interval={5000}>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <h1>Welcome To <span style={{ color: 'red' }}>XNetwork</span> Company Profile.</h1>
-                                <p className="text-dark">XNETWORK is a New Media Company focused to provide services related to IT Services, Mobile Apps and Digital Advertising. </p>
-                                <button className="btn btn-danger mb-4">About Us</button>
-                            </div>
-                            <div className="col-md-6">
-                                <img src="images/company.svg" alt="app" width="298px" className="img-fluid" />
-                            </div>
+            {/* Header */}
+            <header className="foi-header landing-header">
+                <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-light foi-navbar">
+                        <a className="navbar-brand" href="/">
+                            <img src="images/logo.png" alt="Xnetwork" />
+                        </a>
+                        <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon" />
+                        </button>
+                        <div className="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li className="nav-item active">
+                                    <a className="nav-link" href="/" >Home <span className="sr-only">(current)</span></a>
+                                </li>
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="productMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Services <i class="fas fa-caret-down" style={{ marginLeft: '5%' }}></i></a>
+                                    <div className="dropdown-menu animate slideIn" aria-labelledby="productMenu">
+                                        <a className="dropdown-item" href="radiochannel">Radio Channel</a>
+                                        <a className="dropdown-item" href="messaging">Messaging</a>
+                                        <a className="dropdown-item" href="digitalads">Digital Advertising</a>
+                                        <a className="dropdown-item" href="appsproduct">Application Product</a>
+                                    </div>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="career" >Career</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="aboutus" >About Us</a>
+                                </li>
+                            </ul>
+                            <ul className="navbar-nav mt-2 mt-lg-0">
+                                <li className="nav-item">
+                                    <a className="btn btn-secondary" href="contact">Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    {product.length > 0 &&
-                        product.map((item) => {
-                            return (
-                                <div className="carousel-item" data-interval={5000}>
+                    </nav>
+                    <div className="header-content">
+                        <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">
+                            <div className="carousel-inner">
+                                <div className="carousel-item active" data-interval={5000}>
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <h1>{item.description.slice(0, 57)}</h1>
-                                            <p className="text-dark">{item.description.slice(0, 120)}...</p>
-                                            <button className="btn btn-danger mb-4">Read More!</button>
-                                            <div className="my-2">
-                                                <p className="header-app-download-title">GET OUR MOBILE APP</p>
-                                            </div>
-                                            <div>
-                                                <button className="btn btn-app-download"><img src="images/android.svg" alt="play store" /></button>
-                                            </div>
+                                            <h1>Welcome To <span style={{ color: 'red' }}>XNetwork</span> Company Profile.</h1>
+                                            <p className="text-dark">XNETWORK is a New Media Company focused to provide services related to IT Services, Mobile Apps and Digital Advertising. </p>
+                                            <button className="btn btn-danger mb-4">About Us</button>
                                         </div>
                                         <div className="col-md-6">
-                                            <img src={item.image} alt="app" width="388px" className="img-fluid" />
+                                            <img src="images/company.svg" alt="app" width="298px" className="img-fluid" />
                                         </div>
                                     </div>
                                 </div>
-                            )
-                        })
-                    }
+                                {product.length > 0 &&
+                                    product.map((item) => {
+                                        return (
+                                            <div className="carousel-item" data-interval={5000} key={item.id}>
+                                                <div className="row">
+                                                    <div className="col-md-6">
+                                                        <h1>{item.description.slice(0, 57)}</h1>
+                                                        <p className="text-dark">{item.description.slice(0, 120)}...</p>
+                                                        <button className="btn btn-danger mb-4">Read More!</button>
+                                                        <div className="my-2">
+                                                            <p className="header-app-download-title">GET OUR MOBILE APP</p>
+                                                        </div>
+                                                        <div>
+                                                            <button className="btn btn-app-download"><img src="images/android.svg" alt="play store" /></button>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <img src={item.image} alt="app" width="388px" className="img-fluid" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </header>
         </>
     )
 }

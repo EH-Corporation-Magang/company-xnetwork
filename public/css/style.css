@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
-
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -35,8 +31,13 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+}
+
+.body {
+  font-family: 'DM Sans';
+  src: local('DM Sans'), url('https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap');
 }
 
 *,
@@ -12931,18 +12932,6 @@ html {
   }
 }
 
-.contact-widget:first-child {
-  border-right: 1px solid #e0e0e0;
-  padding-left: 0;
-}
-
-@media (max-width: 767px) {
-  .contact-widget:first-child {
-    border-right: 0;
-    border-bottom: 1px solid #e0e0e0;
-  }
-}
-
 .contact-widget img {
   margin-right: 20px;
 }
@@ -13288,7 +13277,7 @@ html {
   animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
 }
-}
+
 
 @keyframes slideIn {
   0% {

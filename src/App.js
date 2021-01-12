@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
-import React from 'react';
+import React, {
+  useState
+} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,65 +11,50 @@ import {
 } from 'react-router-dom';
 import HeaderContent from './Screens/HeaderContent';
 import HomeScreens from './Screens/HomeScreens';
+import ContactScreens from './Screens/ContactScreens';
+import HeaderContent2 from './Screens/HeaderContent2';
 
 function App() {
+  const routepath = window.location.pathname
+  console.log(routepath)
+
   return (
     <Router>
       <Switch>
         <div>
-          {/* Header */}
-          <header className="foi-header landing-header">
-            <div className="container">
-              <nav className="navbar navbar-expand-lg navbar-light foi-navbar">
-                <a className="navbar-brand" href="index.html">
-                  <img src="images/logo.png" alt="Xnetwork" />
-                </a>
-                <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="collapsibleNavId">
-                  <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li className="nav-item active">
-                      <a className="nav-link" href="index.html" >Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item dropdown">
-                      <a className="nav-link dropdown-toggle" href="#" id="productMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Services <i class="fas fa-caret-down" style={{ marginLeft: '5%' }}></i></a>
-                      <div className="dropdown-menu animate slideIn" aria-labelledby="productMenu">
-                        <a className="dropdown-item" href="blog.html">Radio Channel</a>
-                        <a className="dropdown-item" href="login.html">Digital Advertising</a>
-                        <a className="dropdown-item" href="register.html">Application Product</a>
-                      </div>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="features.html" >Career</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="contact.html" >About Us</a>
-                    </li>
-                  </ul>
-                  <ul className="navbar-nav mt-2 mt-lg-0">
-                    <li className="nav-item">
-                      <a className="btn btn-secondary" href="login.html">Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-              <div className="header-content">
 
-                {/* Header Content */}
-                <Route path="/">
-                  <HeaderContent />
-                </Route>
+          {routepath === '/contact'
+            ? <HeaderContent2 />
+            : routepath === '/aboutus'
+              ? <HeaderContent2 />
+              : routepath === '/career'
+                ? <HeaderContent2 />
+                : routepath === '/radiochannel'
+                  ? <HeaderContent2 />
+                  : routepath === '/messaging'
+                    ? <HeaderContent2 />
+                    : routepath === '/digitalads'
+                      ? <HeaderContent2 />
+                      : routepath === '/appsproduct'
+                        ? <HeaderContent2 />
+                        : routepath === '/'
+                        &&
+                        <HeaderContent />
 
-              </div>
-            </div>
-          </header>
+          }
 
           {/* Content */}
-          <main style={{ marginTop: '5%' }}>
+          <main style={{ marginTop: '1px' }}>
             <div className="container">
+
+              {/* HomeScreens */}
               <Route exact path="/">
                 <HomeScreens />
+              </Route>
+
+              {/* ContactScreens */}
+              <Route path="/contact">
+                <ContactScreens />
               </Route>
             </div>
           </main>
@@ -80,7 +67,7 @@ function App() {
                   <h2 className="mb-0">Do you want to know more or just have a question? write to us.</h2>
                 </div>
                 <div className="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
-                  <a href="contact.html" className="btn btn-lg" style={{ backgroundColor: "white" }}>Contact form</a>
+                  <a href="contact" className="btn btn-lg" style={{ backgroundColor: "white" }}>Contact form</a>
                 </div>
               </div>
               <div className="row footer-widget-area">
