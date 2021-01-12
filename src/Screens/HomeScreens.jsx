@@ -19,7 +19,8 @@ const HomeScreens = () => {
                                         <span className="landing-feature-icon" />
                                         <div className="media-body">
                                             <h5>Has UI & UX</h5>
-                                            <p>All the basics for businesses that are just getting started.</p>
+                                            <p>
+                                                User Interface Design or user interface engineering is a design for software applications, and websites that focuses on user experience and interaction.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -27,8 +28,9 @@ const HomeScreens = () => {
                                     <div className="media landing-feature">
                                         <span className="landing-feature-icon" />
                                         <div className="media-body">
-                                            <h5>Premium</h5>
-                                            <p>All the basics for businesses that are just getting started.</p>
+                                            <h5>Avaible Any Devices</h5>
+                                            <p>
+                                                Because it can be accessed in a browser, all cellphones that have an internet connection can be connected.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -36,7 +38,7 @@ const HomeScreens = () => {
                                     <div className="media landing-feature">
                                         <span className="landing-feature-icon" />
                                         <div className="media-body">
-                                            <h5>Standard</h5>
+                                            <h5>Can reach all publishers at the same time</h5>
                                             <p>All the basics for businesses that are just getting started.</p>
                                         </div>
                                     </div>
@@ -46,6 +48,8 @@ const HomeScreens = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Faq */}
             <section className="py-5 mb-5">
                 <div className="container">
                     <h2>FAQ</h2>

@@ -31,8 +31,8 @@ function App() {
                       <a className="nav-link" href="index.html" >Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item dropdown">
-                      <a className="nav-link dropdown-toggle" href="#" id="productMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Product <i class="fas fa-caret-down" style={{ marginLeft: '5%' }}></i></a>
-                      <div className="dropdown-menu" aria-labelledby="productMenu">
+                      <a className="nav-link dropdown-toggle" href="#" id="productMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Services <i class="fas fa-caret-down" style={{ marginLeft: '5%' }}></i></a>
+                      <div className="dropdown-menu animate slideIn" aria-labelledby="productMenu">
                         <a className="dropdown-item" href="blog.html">Radio Channel</a>
                         <a className="dropdown-item" href="login.html">Digital Advertising</a>
                         <a className="dropdown-item" href="register.html">Application Product</a>
@@ -46,8 +46,8 @@ function App() {
                     </li>
                   </ul>
                   <ul className="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item">
-                      <a class="btn btn-secondary" href="login.html">Contact Us</a>
+                    <li className="nav-item">
+                      <a className="btn btn-secondary" href="login.html">Contact Us</a>
                     </li>
                   </ul>
                 </div>
