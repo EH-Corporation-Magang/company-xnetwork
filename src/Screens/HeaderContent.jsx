@@ -88,7 +88,7 @@ const HeaderContent = () => {
                                                     <div className="col-md-6">
                                                         <h1>{item.description.slice(0, 57)}</h1>
                                                         <p className="text-dark">{item.description.slice(0, 120)}...</p>
-                                                        <button className="btn btn-danger mb-4">Read More!</button>
+                                                        <a href="appsproduct" className="btn btn-danger mb-4">Read More!</a>
                                                         <div className="my-2">
                                                             <p className="header-app-download-title">GET OUR MOBILE APP</p>
                                                         </div>
