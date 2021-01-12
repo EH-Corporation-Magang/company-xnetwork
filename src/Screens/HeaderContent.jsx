@@ -38,7 +38,7 @@ const HeaderContent = () => {
                                 <button className="btn btn-danger mb-4">About Us</button>
                             </div>
                             <div className="col-md-6">
-                                <img src="images/company.svg" alt="app" width="310px" className="img-fluid" />
+                                <img src="images/company.svg" alt="app" width="298px" className="img-fluid" />
                             </div>
                         </div>
                     </div>
