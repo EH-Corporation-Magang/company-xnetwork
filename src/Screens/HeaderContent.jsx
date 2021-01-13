@@ -88,8 +88,8 @@ const HeaderContent = () => {
                                             <div className="carousel-item" data-interval={5000} key={item.id}>
                                                 <div className="row">
                                                     <div className="col-md-6">
-                                                        <h1>{item.description.slice(0, 57)}</h1>
-                                                        <p className="text-dark">{item.description.slice(0, 120)}...</p>
+                                                        <img src={item.icon} width="300px" style={{ marginBottom: '3%' }} alt="icon_apk" />
+                                                        <p className="text-dark">{item.description}</p>
                                                         <a href="appsproduct" className="btn btn-danger mb-4">Read More!</a>
                                                         <div className="my-2">
                                                             <p className="header-app-download-title">GET OUR MOBILE APP</p>

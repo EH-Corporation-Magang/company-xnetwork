@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
-import React, {
-  useState
-} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +13,7 @@ import ContactScreens from './Screens/ContactScreens';
 import HeaderContent2 from './Screens/HeaderContent2';
 import CareerScreens from './Screens/CareerScreens';
 import AboutUsScreens from './Screens/AboutUsScreens';
+import ProductScreens from './Screens/ProductScreens';
 
 function App() {
   const routepath = window.location.pathname
@@ -66,6 +65,11 @@ function App() {
               {/* AboutUsScreens */}
               <Route path="/aboutus">
                 <AboutUsScreens />
+              </Route>
+
+              {/* ProductScreens */}
+              <Route path="/appsproduct">
+                <ProductScreens />
               </Route>
 
             </div>
