@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/role-supports-aria-props */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {
     useState,
     useEffect
@@ -73,7 +75,7 @@ const HeaderContent = () => {
                                         <div className="col-md-6">
                                             <h1>Welcome To <span style={{ color: 'red' }}>XNetwork</span> Company Profile.</h1>
                                             <p className="text-dark">XNETWORK is a New Media Company focused to provide services related to IT Services, Mobile Apps and Digital Advertising. </p>
-                                            <button className="btn btn-danger mb-4">About Us</button>
+                                            <a href="/aboutus" className="btn btn-danger mb-4">About Us</a>
                                         </div>
                                         <div className="col-md-6">
                                             <img src="images/company.svg" alt="app" width="298px" className="img-fluid" />
@@ -93,7 +95,7 @@ const HeaderContent = () => {
                                                             <p className="header-app-download-title">GET OUR MOBILE APP</p>
                                                         </div>
                                                         <div>
-                                                            <button className="btn btn-app-download"><img src="images/android.svg" alt="play store" /></button>
+                                                            <a href="https://play.google.com/store/apps/developer?id=sakti+developer" className="btn btn-app-download"><img src="images/android.svg" alt="play store" /></a>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6">

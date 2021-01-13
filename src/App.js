@@ -13,6 +13,8 @@ import HeaderContent from './Screens/HeaderContent';
 import HomeScreens from './Screens/HomeScreens';
 import ContactScreens from './Screens/ContactScreens';
 import HeaderContent2 from './Screens/HeaderContent2';
+import CareerScreens from './Screens/CareerScreens';
+import AboutUsScreens from './Screens/AboutUsScreens';
 
 function App() {
   const routepath = window.location.pathname
@@ -40,7 +42,6 @@ function App() {
                         : routepath === '/'
                         &&
                         <HeaderContent />
-
           }
 
           {/* Content */}
@@ -56,6 +57,17 @@ function App() {
               <Route path="/contact">
                 <ContactScreens />
               </Route>
+
+              {/* CareerScreens */}
+              <Route path="/career">
+                <CareerScreens />
+              </Route>
+
+              {/* AboutUsScreens */}
+              <Route path="/aboutus">
+                <AboutUsScreens />
+              </Route>
+
             </div>
           </main>
 
@@ -77,26 +89,32 @@ function App() {
                   </div>
                   <p className="font-os font-weight-semibold mb3">Get our mobile app</p>
                   <div>
-                    <button className="btn btn-app-download"><img src="images/android.svg" alt="play store" /></button>
+                    <a href
+                      ="https://play.google.com/store/apps/developer?id=sakti+developer" className="btn btn-app-download"><img src="images/android.svg" alt="play store" /></a>
                   </div>
                 </div>
                 <div className="col-md-4 mt-3 mt-md-0">
                   <nav>
                     <ul className="nav flex-column">
                       <li className="nav-item">
-                        <a href="#!" className="nav-link">About</a>
+                        <a href="/" className="nav-link">Home</a>
                       </li>
                       <li className="nav-item">
-                        <a href="#!" className="nav-link">Services</a>
+                        <a href="#" style={{ textDecoration: 'none', color: 'white' }} className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Services <i className="fas fa-caret-down"></i>
+                        </a>
+                        <div className="dropdown-menu animate slideIn" style={{ marginTop: '16%' }}>
+                          <a className="dropdown-item" href="radiochannel">Radio Channel</a>
+                          <a className="dropdown-item" href="messaging">Messaging</a>
+                          <a className="dropdown-item" href="digitalads">Digital Advertising</a>
+                          <a className="dropdown-item" href="appsproduct">Application Product</a>
+                        </div>
                       </li>
                       <li className="nav-item">
-                        <a href="#!" className="nav-link">Careers <span className="badge badge-pill badge-secondary ml-3">Hiring</span></a>
+                        <a href="/career" className="nav-link">Careers <span className="badge badge-pill badge-secondary ml-3">Hiring</span></a>
                       </li>
                       <li className="nav-item">
-                        <a href="#!" className="nav-link">Blog</a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="#!" className="nav-link">Shop with us</a>
+                        <a href="/aboutus" className="nav-link">About</a>
                       </li>
                     </ul>
                   </nav>
