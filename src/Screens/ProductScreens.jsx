@@ -58,7 +58,7 @@ const ProductScreens = () => {
                                             <div className="col-md-6">
                                                 <img src={item.icon} width="300px" alt="icon_apk" style={{ marginBottom: '5%' }} />
                                                 <p className="mb-3">{item.description}</p>
-                                                <h3 className="mb-4">Application Features</h3>
+                                                <h3 className="mb-4 mt-5">Application Features</h3>
                                                 <div className="row">
                                                     <div className="col-md-6 mb-3">
                                                         <div className="media landing-feature">
@@ -150,6 +150,7 @@ const ProductScreens = () => {
                                             <div className="col-md-6 mb-5 mb-md-0">
                                                 <img src={item.icon} width="300px" alt="icon_apk" style={{ marginBottom: '5%' }} />
                                                 <p className="mb-5">{item.description}</p>
+                                                <h3 className="mb-4 mt-5">Application Features</h3>
                                                 <div className="row">
                                                     <div className="col-md-6 mb-3">
                                                         <div className="media landing-feature">
