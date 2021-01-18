@@ -1,6 +1,29 @@
-import React from 'react';
+import React, {
+    useState,
+    useEffect
+} from 'react';
 
 const RadioScreens = () => {
+    const [radio, setRadio] = useState('')
+    const URL_API = 'http://localhost:8000'
+
+    const fetchRadio = async () => {
+        try {
+            const data = await fetch(`${URL_API}/radiocoverage`, {
+                method: 'GET'
+            })
+            const resp = await data.json()
+            setRadio(resp.result)
+        } catch (error) {
+            console.log(error)
+            alert(error)
+        }
+    }
+
+    useEffect(() => {
+        fetchRadio()
+    }, [])
+
     return (
         <>
             {/* header */}
@@ -47,6 +70,42 @@ const RadioScreens = () => {
                                 <b>GENDER</b>	:	MALE - 45%, FEMALE - 55%
                                 </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section className="foi-page-section" style={{ marginBottom: '5%', marginTop: '5%' }}>
+                <div className="row">
+                    <div className="col-md-6 mb-5 mb-md-0">
+                        <h2 className="about-section-two-title">Radio Coverage </h2>
+                        <div className="about-section-two-content">
+                            <p className="mb-5">
+                                the coverage of a radio station is the geographic area where the station can communicate. Broadcasters and telecommunications companies frequently produce coverage maps to indicate to users the station's intended service area.
+                            </p>
+                            <div className="row">
+                                {radio.length > 0 ?
+                                    radio.map((item) => {
+                                        return (
+                                            <div className="col-md-6 mb-3">
+                                                <div className="media landing-feature">
+                                                    <span className="landing-feature-icon" />
+                                                    <div className="media-body">
+                                                        <h5>{item.fm}</h5>
+                                                        <p>
+                                                            {item.provinsi}, {item.kota}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                    :
+                                    <div></div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <img src="images/audience.svg" alt="about 2" className="w-100 img-fluid pr-md-5" width="437px" />
                     </div>
                 </div>
             </section>
