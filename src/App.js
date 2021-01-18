@@ -14,6 +14,8 @@ import HeaderContent2 from './Screens/HeaderContent2';
 import CareerScreens from './Screens/CareerScreens';
 import AboutUsScreens from './Screens/AboutUsScreens';
 import ProductScreens from './Screens/ProductScreens';
+import DigitalAdsScreens from './Screens/DigitalAdsScreens';
+import RadioScreens from './Screens/RadioScreens';
 
 function App() {
   const routepath = window.location.pathname
@@ -39,8 +41,59 @@ function App() {
                       : routepath === '/appsproduct'
                         ? <HeaderContent2 />
                         : routepath === '/'
-                        &&
-                        <HeaderContent />
+                          ? <HeaderContent />
+                          : routepath &&
+                          <>
+                            <header className="foi-header">
+                              <div className="container">
+                                <nav className="navbar navbar-expand-lg navbar-light foi-navbar">
+                                  <a className="navbar-brand" href="/">
+                                    <img src="images/logo.png" alt="Xnetwork" />
+                                  </a>
+                                  <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon" />
+                                  </button>
+                                  <div className="collapse navbar-collapse" id="collapsibleNavId">
+                                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                                      <li className="nav-item active">
+                                        <a className="nav-link" href="/" >Home <span className="sr-only">(current)</span></a>
+                                      </li>
+                                      <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle" href="#" id="productMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Services <i className="fas fa-caret-down" style={{ marginLeft: '5%' }}></i></a>
+                                        <div className="dropdown-menu animate slideIn" aria-labelledby="productMenu">
+                                          <a className="dropdown-item" href="radiochannel">Radio Channel</a>
+                                          <a className="dropdown-item" href="messaging">Messaging</a>
+                                          <a className="dropdown-item" href="digitalads">Digital Advertising</a>
+                                          <a className="dropdown-item" href="appsproduct">Application Product</a>
+                                        </div>
+                                      </li>
+                                      <li className="nav-item">
+                                        <a className="nav-link" href="career" >Career</a>
+                                      </li>
+                                      <li className="nav-item">
+                                        <a className="nav-link" href="aboutus" >About Us</a>
+                                      </li>
+                                    </ul>
+                                    <ul className="navbar-nav mt-2 mt-lg-0">
+                                      <li className="nav-item">
+                                        <a className="btn btn-secondary" href="contact">Contact Us</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </nav>
+                              </div>
+                            </header>
+                            <main className="page-error">
+                              <div className="container">
+                                <section className="error-section">
+                                  <h1 className="error-code">404</h1>
+                                  <p className="error-message">Sorry, the page you are looking for could not be found.</p>
+                                  <img src="images/404.png" alt="page not found" className="error-img" />
+                                  <a href="/" className="btn btn-danger btn-error-action">Return Home</a>
+                                </section>
+                              </div>
+                            </main>
+                          </>
           }
 
           {/* Content */}
@@ -70,6 +123,16 @@ function App() {
               {/* ProductScreens */}
               <Route path="/appsproduct">
                 <ProductScreens />
+              </Route>
+
+              {/* DigitalScreens */}
+              <Route path="/digitalads">
+                <DigitalAdsScreens />
+              </Route>
+
+              {/* RadioScreens */}
+              <Route path="/radiochannel">
+                <RadioScreens />
               </Route>
 
             </div>
