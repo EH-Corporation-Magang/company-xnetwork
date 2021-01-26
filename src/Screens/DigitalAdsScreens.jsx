@@ -67,36 +67,52 @@ const DigitalAdsScreen = () => {
                         </div>
                         <div className="col-md-6">
                             <h2 className="section-title">Advertising Solution</h2>
-                            <p className="mb-5">
-                                Reach Mobile Users worldwide using HTTP / HTTPS insertion connected to various advertisements on a number of mobile sites or applications and browsers accessed via the mobile network.</p>
-                            <div className="row">
-                                <div className="col-md-6 mb-3">
-                                    <div className="media landing-feature">
-                                        <span className="landing-feature-icon" />
-                                        <div className="media-body">
-                                            <h5>Has UI & UX</h5>
-                                            <p>
-                                                User Interface Design or user interface engineering is a design for software applications, and websites that focuses on user experience and interaction.</p>
-                                        </div>
+                            <p className="mb-4">
+                                Reach Mobile Users worldwide using HTTP / HTTPS insertion connected to various advertisements on a number of mobile sites or applications and browsers accessed via the mobile network.
+                            </p>
+                            <h3 className="section-title">More About Digital Advertising</h3>
+                            <div className="card feature-faq-card">
+                                <div className="card-header bg-white" id="featureFaqOneTitle">
+                                    <a href="#featureFaqOneCollapse" className="d-flex align-items-center" data-toggle="collapse">
+                                        <h5 className="mb-0">What is the cost per mile?</h5> <i className="far fa-plus-square ml-auto" />
+                                    </a>
+                                </div>
+                                <div id="featureFaqOneCollapse" className="collapse" aria-labelledby="featureFaqOneTitle">
+                                    <div className="card-body">
+                                        <p className="mb-2 text-gray">
+                                            Cost per mille (CPM), also called cost ‰ and Cost Per Thousand (CPT) (in Latin mille means thousand), is a measurement commonly used in advertising. Radio, television, newspapers, magazines and online advertisements can be purchased on the basis of showing advertisements for a thousand viewers. For example, $ 1 CPM means $ 1 for 1000 ads shown to the audience. Metrics (CPM) are calculated by dividing the cost of placing an ad by the number of impressions (expressed in thousands) it generated. CPM is useful for comparing the relative efficiency of various advertising or media opportunities and in evaluating the overall cost of an advertising campaign.
+                                        </p>
+                                        <a href="https://id.wikipedia.org/wiki/Cost_per_mille" class="feature-link" style={{ fontSize: '13px' }}>Find out More!</a>
                                     </div>
                                 </div>
-                                <div className="col-md-6 mb-3">
-                                    <div className="media landing-feature">
-                                        <span className="landing-feature-icon" />
-                                        <div className="media-body">
-                                            <h5>Avaible Any Devices</h5>
-                                            <p>
-                                                Because it can be accessed in a browser, all cellphones that have an internet connection can be connected.</p>
-                                        </div>
+                            </div>
+                            <div className="card feature-faq-card">
+                                <div className="card-header bg-white" id="featureFaqTwoTitle">
+                                    <a href="#featureFaqTwoCollapse" className="d-flex align-items-center" data-toggle="collapse">
+                                        <h5 className="mb-0">What is the cost per acquisition?</h5> <i className="far fa-plus-square ml-auto" />
+                                    </a>
+                                </div>
+                                <div id="featureFaqTwoCollapse" className="collapse" aria-labelledby="featureFaqTwoTitle">
+                                    <div className="card-body">
+                                        <p className="mb-2 text-gray">
+                                            The CPA marketing business is one of the easiest and most profitable businesses. Then what is CPA? CPA is Cost Per Acquisition which is a derivative of Affiliate Marketing.
+                                        </p>
+                                        <a href="https://www.bigcommerce.com/ecommerce-answers/what-is-cost-per-acquisition-cpa-what-is-benchmark-retailers/" class="feature-link" style={{ fontSize: '13px' }}>Find out More!</a>
                                     </div>
                                 </div>
-                                <div className="col-md-6 mb-3">
-                                    <div className="media landing-feature">
-                                        <span className="landing-feature-icon" />
-                                        <div className="media-body">
-                                            <h5>Can reach all publishers at the same time</h5>
-                                            <p>All the basics for businesses that are just getting started.</p>
-                                        </div>
+                            </div>
+                            <div className="card feature-faq-card">
+                                <div className="card-header bg-white" id="featureFaqThreeTitle">
+                                    <a href="#featureFaqThreeCollapse" className="d-flex align-items-center" data-toggle="collapse">
+                                        <h5 className="mb-0">What is cost per sale?</h5> <i className="far fa-plus-square ml-auto" />
+                                    </a>
+                                </div>
+                                <div id="featureFaqThreeCollapse" className="collapse" aria-labelledby="featureFaqThreeTitle">
+                                    <div className="card-body">
+                                        <p className="mb-2 text-gray">
+                                            Cost Per Sale, or CPS is a marketing method where advertisers pay publishers when they convert traffic or leads into real sales.
+                                        </p>
+                                        <a href="https://www.wordstream.com/cost-per-sale#:~:text=Cost%20per%20sale%2C%20also%20known,generated%20by%20a%20particular%20ad." class="feature-link" style={{ fontSize: '13px' }}>Find out More!</a>
                                     </div>
                                 </div>
                             </div>
@@ -106,43 +122,45 @@ const DigitalAdsScreen = () => {
             </section>
 
             <section className="related-posts-section" style={{ marginBottom: '10%' }}>
-                <h4 className="related-posts-section-title mb-4">How digital advertising works?</h4>
                 <section className="py-5 mb-5">
                     {digitalads.length > 0 &&
                         digitalads.map((item) => {
                             return (
-                                <div className="card faq-card" key={item.id}>
-                                    <div className="card-header bg-white">
-                                        <a href={`#faq${item.id}Collapse`} className="d-flex align-items-center" data-toggle="collapse">
-                                            <h6 className="mb-0">
-                                                {item.title}
-                                            </h6>
-                                            <i className="far fa-plus-square ml-auto" />
-                                        </a>
-                                    </div>
-                                    <div id={`faq${item.id}Collapse`} className="collapse">
-                                        <div className="card-body">
-                                            <div className="row">
-                                                <div className="col-md-6">
-                                                    <img src={item.image} alt="content1" width="60%" style={{ marginLeft: '20%' }} />
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <h2>
-                                                        {item.subtitle}
-                                                    </h2>
-                                                    <p className="mb-0">
-                                                        {item.description}
-                                                    </p>
+                                <>
+                                    <h4 className="related-posts-section-title mb-4">How digital advertising works?</h4>
+                                    <div className="card faq-card" key={item.id}>
+                                        <div className="card-header bg-white">
+                                            <a href={`#faq${item.id}Collapse`} className="d-flex align-items-center" data-toggle="collapse">
+                                                <h6 className="mb-0">
+                                                    {item.title}
+                                                </h6>
+                                                <i className="far fa-plus-square ml-auto" />
+                                            </a>
+                                        </div>
+                                        <div id={`faq${item.id}Collapse`} className="collapse">
+                                            <div className="card-body">
+                                                <div className="row">
+                                                    <div className="col-md-6">
+                                                        <img src={item.image} alt="content1" width="60%" style={{ marginLeft: '20%' }} />
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <h2>
+                                                            {item.subtitle}
+                                                        </h2>
+                                                        <p className="mb-0">
+                                                            {item.description}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </>
                             )
                         })
                     }
                     {digitalads.length === 0 &&
-                        <div>Data Kosong</div>
+                        <p></p>
                     }
                 </section>
             </section>

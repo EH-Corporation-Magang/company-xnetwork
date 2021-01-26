@@ -16,10 +16,10 @@ import AboutUsScreens from './Screens/AboutUsScreens';
 import ProductScreens from './Screens/ProductScreens';
 import DigitalAdsScreens from './Screens/DigitalAdsScreens';
 import RadioScreens from './Screens/RadioScreens';
+import MessagingScreens from './Screens/MessagingScreens';
 
 function App() {
   const routepath = window.location.pathname
-  console.log(routepath)
 
   return (
     <Router>
@@ -134,6 +134,11 @@ function App() {
               <Route path="/radiochannel">
                 <RadioScreens />
               </Route>
+
+               {/* MessagingScreens */}
+               <Route path="/messaging">
+                 <MessagingScreens/>
+               </Route>
 
             </div>
           </main>

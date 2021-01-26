@@ -3,7 +3,7 @@ import React from 'react';
 const HomeScreens = () => {
     return (
         <>
-            <section className="py-5 mb-5">
+            <section className="py-5 mb-5 mt-4">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 mb-5 mb-md-0">
