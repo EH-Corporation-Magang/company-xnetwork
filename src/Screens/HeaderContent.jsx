@@ -5,9 +5,12 @@ import React, {
     useEffect
 } from 'react';
 
-const HeaderContent = () => {
+
+const HeaderContent = (theme) => {
     const [product, setProduct] = useState('')
     const URL_API = `http://localhost:8000`
+
+    console.log(theme)
 
     const fetchApps = async () => {
         try {
@@ -34,14 +37,18 @@ const HeaderContent = () => {
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light foi-navbar">
                         <a className="navbar-brand" href="/">
-                            <img src="images/logo.png" alt="Xnetwork" />
+                            {theme.theme === 'light' ?
+                                <img src="images/xlogohitam.png" width="95px" alt="Xnetwork" />
+                                :
+                                <img src="images/xlogo.png" width="95px" alt="Xnetwork" />
+                            }
                         </a>
                         <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
                         <div className="collapse navbar-collapse" id="collapsibleNavId">
                             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                                <li className="nav-item active">
+                                <li className="nav-item">
                                     <a className="nav-link" href="/" >Home <span className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item dropdown">
@@ -62,6 +69,9 @@ const HeaderContent = () => {
                             </ul>
                             <ul className="navbar-nav mt-2 mt-lg-0">
                                 <li className="nav-item">
+
+                                </li>
+                                <li className="nav-item">
                                     <a className="btn btn-secondary" href="contact">Contact Us</a>
                                 </li>
                             </ul>
@@ -74,7 +84,7 @@ const HeaderContent = () => {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <h1>Welcome To <span style={{ color: 'red' }}>XNetwork</span> Company Profile.</h1>
-                                            <p className="text-dark">XNETWORK is a New Media Company focused to provide services related to IT Services, Mobile Apps and Digital Advertising. </p>
+                                            <p>XNETWORK is a New Media Company focused to provide services related to IT Services, Mobile Apps and Digital Advertising. </p>
                                             <a href="/aboutus" className="btn btn-danger mb-4">About Us</a>
                                         </div>
                                         <div className="col-md-6">
@@ -89,7 +99,7 @@ const HeaderContent = () => {
                                                 <div className="row">
                                                     <div className="col-md-6">
                                                         <img src={item.icon} width="300px" style={{ marginBottom: '3%' }} alt="icon_apk" />
-                                                        <p className="text-dark">{item.description}</p>
+                                                        <p>{item.description}</p>
                                                         <a href="appsproduct" className="btn btn-danger mb-4">Read More!</a>
                                                         <div className="my-2">
                                                             <p className="header-app-download-title">GET OUR MOBILE APP</p>

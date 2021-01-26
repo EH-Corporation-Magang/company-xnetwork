@@ -51,7 +51,7 @@ const CareerScreens = () => {
                                                 return (
                                                     <li className="list-group-item">
                                                         <div>
-                                                            <h5 className="position-title">{item.job_position}</h5>
+                                                            <h6 className="position-title">{item.job_position}</h6>
                                                             <p className="position-location">{item.job_location}</p>
                                                         </div>
                                                         <a href={`//${item.job_link}`} className="btn btn-danger apply-btn">Apply Now</a>

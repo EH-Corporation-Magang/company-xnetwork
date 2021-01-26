@@ -37,6 +37,15 @@
   color: #61dafb;
 }
 
+.foi-footer {
+  background-color: #0000;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  border-color: black;
+  background-color: black;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -74,7 +74,7 @@ const DigitalAdsScreen = () => {
                             <div className="card feature-faq-card">
                                 <div className="card-header bg-white" id="featureFaqOneTitle">
                                     <a href="#featureFaqOneCollapse" className="d-flex align-items-center" data-toggle="collapse">
-                                        <h5 className="mb-0">What is the cost per mile?</h5> <i className="far fa-plus-square ml-auto" />
+                                        <h6 className="mb-0" style={{ marginLeft: '5%' }}>What is the cost per mile?</h6> <i className="far fa-plus-square ml-auto" />
                                     </a>
                                 </div>
                                 <div id="featureFaqOneCollapse" className="collapse" aria-labelledby="featureFaqOneTitle">
@@ -89,7 +89,7 @@ const DigitalAdsScreen = () => {
                             <div className="card feature-faq-card">
                                 <div className="card-header bg-white" id="featureFaqTwoTitle">
                                     <a href="#featureFaqTwoCollapse" className="d-flex align-items-center" data-toggle="collapse">
-                                        <h5 className="mb-0">What is the cost per acquisition?</h5> <i className="far fa-plus-square ml-auto" />
+                                        <h6 className="mb-0" style={{ marginLeft: '5%' }}>What is the cost per acquisition?</h6> <i className="far fa-plus-square ml-auto" />
                                     </a>
                                 </div>
                                 <div id="featureFaqTwoCollapse" className="collapse" aria-labelledby="featureFaqTwoTitle">
@@ -104,7 +104,7 @@ const DigitalAdsScreen = () => {
                             <div className="card feature-faq-card">
                                 <div className="card-header bg-white" id="featureFaqThreeTitle">
                                     <a href="#featureFaqThreeCollapse" className="d-flex align-items-center" data-toggle="collapse">
-                                        <h5 className="mb-0">What is cost per sale?</h5> <i className="far fa-plus-square ml-auto" />
+                                        <h6 className="mb-0" style={{ marginLeft: '5%' }}> What is cost per sale?</h6> <i className="far fa-plus-square ml-auto" />
                                     </a>
                                 </div>
                                 <div id="featureFaqThreeCollapse" className="collapse" aria-labelledby="featureFaqThreeTitle">

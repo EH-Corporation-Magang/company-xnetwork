@@ -31,7 +31,7 @@ const RadioScreens = () => {
                 <div className="row">
                     <div className="col-md-6">
                         <img src="images/logochannel.png" width="300px" style={{ marginBottom: '3%' }} alt="icon_apk" />
-                        <p className="text-dark">
+                        <p>
                             XChannel radio broadcasts from Bogor, West Java, on the local frequency of 87.8 FM. This radio presents the world's best hits music and various entertainment programs and information suitable for young listeners. </p>
                         <a href="https://xchannel.id/" className="btn btn-danger mb-4">See The Website</a>
                         <div className="my-2">

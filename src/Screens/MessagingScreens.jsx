@@ -39,7 +39,7 @@ const MessagingScreens = () => {
                         <div className="card faq-card">
                             <div className="card-header bg-white" id="faqOneTitle">
                                 <a href="#faqOneCollapse" className="d-flex align-items-center" data-toggle="collapse">
-                                    <h6 className="mb-0">SMS Bulk - OTP</h6> <i className="far fa-plus-square ml-auto" />
+                                    <h6 className="mb-0">SMS Bulk - OTP</h6> <i className="far fa-plus-square ml-auto" style={{ color: 'black' }} />
                                 </a>
                             </div>
                             <div id="faqOneCollapse" className="collapse" aria-labelledby="faqOneTitle">
@@ -61,7 +61,7 @@ const MessagingScreens = () => {
                         <div className="card faq-card">
                             <div className="card-header bg-white" id="faqTwoTitle">
                                 <a href="#faqTwoCollapse" className="d-flex align-items-center" data-toggle="collapse">
-                                    <h6 className="mb-0">SMS BULK - SMS BROADCAST</h6> <i className="far fa-plus-square ml-auto" />
+                                    <h6 className="mb-0">SMS BULK - SMS BROADCAST</h6> <i className="far fa-plus-square ml-auto" style={{ color: 'black' }} />
                                 </a>
                             </div>
                             <div id="faqTwoCollapse" className="collapse" aria-labelledby="faqTwoTitle">
@@ -82,7 +82,7 @@ const MessagingScreens = () => {
                         <div className="card faq-card">
                             <div className="card-header bg-white" id="faqThreeTitle">
                                 <a href="#faqThreeCollapse" className="d-flex align-items-center" data-toggle="collapse">
-                                    <h6 className="mb-0">SMS BULK - SMS LONG NUMBER</h6> <i className="far fa-plus-square ml-auto" />
+                                    <h6 className="mb-0">SMS BULK - SMS LONG NUMBER</h6> <i className="far fa-plus-square ml-auto" style={{ color: 'black' }} />
                                 </a>
                             </div>
                             <div id="faqThreeCollapse" className="collapse" aria-labelledby="faqThreeTitle">
