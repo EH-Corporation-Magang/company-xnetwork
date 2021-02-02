@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
-import React, {
-  useState
-} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,19 +36,19 @@ function App() {
         <Switch>
           <div>
             {routepath === '/contact'
-              ? <HeaderContent2 />
+              ? <HeaderContent2 theme={theme} />
               : routepath === '/aboutus'
-                ? <HeaderContent2 />
+                ? <HeaderContent2  theme={theme}/>
                 : routepath === '/career'
-                  ? <HeaderContent2 />
+                  ? <HeaderContent2 theme={theme}/>
                   : routepath === '/radiochannel'
-                    ? <HeaderContent2 />
+                    ? <HeaderContent2 theme={theme}/>
                     : routepath === '/messaging'
-                      ? <HeaderContent2 />
+                      ? <HeaderContent2 theme={theme}/>
                       : routepath === '/digitalads'
-                        ? <HeaderContent2 />
+                        ? <HeaderContent2 theme={theme}/>
                         : routepath === '/appsproduct'
-                          ? <HeaderContent2 />
+                          ? <HeaderContent2 theme={theme}/>
                           : routepath === '/'
                             ? <HeaderContent theme={theme} />
                             : routepath &&

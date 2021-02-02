@@ -10,8 +10,6 @@ const HeaderContent = (theme) => {
     const [product, setProduct] = useState('')
     const URL_API = `http://localhost:8000`
 
-    console.log(theme)
-
     const fetchApps = async () => {
         try {
             const data = await fetch(`${URL_API}/product`, {

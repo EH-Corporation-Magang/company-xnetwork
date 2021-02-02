@@ -2,14 +2,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-const HeaderContent2 = () => {
+const HeaderContent2 = (theme) => {
+    console.log(theme)
+
     return (
         <>
             <header className="foi-header">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light foi-navbar">
                         <a className="navbar-brand" href="/">
-                            <img src="images/logo.png" alt="Xnetwork" />
+                            {theme.theme === 'light' ?
+                                <img src="images/xlogohitam.png" width="95px" alt="Xnetwork" />
+                                :
+                                <img src="images/xlogo.png" width="95px" alt="Xnetwork" />
+                            }
                         </a>
                         <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
